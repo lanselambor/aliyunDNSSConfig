@@ -18,4 +18,19 @@ account_id = ""
 # 请填写你的一级域名
 rc_domain = ''
 ```
+***Set schedule task***
+```
+1.Edit cron schedule task 
+crontab -e
 
+2.Add new schedule task below 
+* * * * * /usr/bin/python /{path to the source}/aliyunDNSS.py
+
+3.Save and exit
+
+4.Check cron task 
+crontab -l
+
+5.check log.txt
+cat log.txt
+```
