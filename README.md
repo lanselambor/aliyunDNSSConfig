@@ -25,6 +25,8 @@ publicIP.py
 
 ```
 # Modify ip address location and service provider
+# Copy below link to browser look what ip information is
+# http://cn.bing.com/search?q=ip&go=%E6%8F%90%E4%BA%A4&qs=n&form=QBLH&pq=ip&sc=8-2&sp=-1&sk=&cvid=14b93b305cdc4183875411c3d9edf938
 self.html_re = re.compile(r'ip: (.+?) 广东省深圳市 天威视讯',re.DOTALL)
 ```
 ***Set schedule task***
