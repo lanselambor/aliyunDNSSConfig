@@ -1,4 +1,5 @@
 # -*- coding: UTF-8 -*-
+#!/usr/bin/python
 
 import json
 import os
@@ -162,8 +163,12 @@ if __name__ == '__main__':
     print 'New IP address: ', rc_value
     print 'Old IP address: ', rc_value
 
-    if rc_value_old == rc_value:
+    if rc_value_old == rc_value and rc_value_old != None and rc_value != None:
         print 'The specified value of parameter Value is the same as old'
     else:        
         update_dns(rc_rr, rc_type, rc_value, rc_record_id, rc_ttl, rc_format)
         write_to_file()
+        # save IP change log
+        string = datetime.now().isoformat() + '\r\nNew IP: '+rc_value+'\n\rOld IP: '+rc_value + '\r\n'
+        cmd = "echo \'{}\' >> \'{}\'".format(string, os.path.dirname(__file__)+'/log.txt')
+        os.system(cmd)
