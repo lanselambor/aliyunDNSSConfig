@@ -1,0 +1,5 @@
+.DS_Store
+aliyun_ddns_log.txt
+aliyun-python-sdk-core
+aliyun-python-sdk-alidns
+*.pyc
